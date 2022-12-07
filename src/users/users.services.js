@@ -68,7 +68,6 @@ const patchUser = (req, res) => {
 
 const deleteUser = (req, res) => {
     const id = req.params.id;
-
     userControllers.deleteUser(id)
         .then((data) => {
             if(data){
@@ -81,6 +80,8 @@ const deleteUser = (req, res) => {
             res.status(400).json({message: err.message})
         })
 }
+
+
 
 module.exports = {
     getAllUsers,
